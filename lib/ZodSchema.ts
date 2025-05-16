@@ -6,6 +6,8 @@ export const Purchase = z.object({
   email: z.string().email("Invalid email address"),
   phone: z.string().min(1, "Phone number is required"),
   product: z.string(),
+  productname: z.string(),
+  price: z.number(),
   country: z.enum([
     "United_States",
     "Canada",

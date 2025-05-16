@@ -2,6 +2,8 @@
 import { parseWithZod } from "@conform-to/zod";
 import { prisma } from "../lib/db";
 import { Purchase } from "../lib/ZodSchema";
+import { redirect } from "next/navigation";
+
 
 export async function createorder(prevState: unknown, formData: FormData) {
   const submission = parseWithZod(formData, {
@@ -20,6 +22,8 @@ export async function createorder(prevState: unknown, formData: FormData) {
         email: submission.value.email,
         phone: submission.value.phone,
         product: submission.value.product,
+        price: submission.value.price,
+        productname: submission.value.productname,
         country: submission.value.country,
       },
     });
@@ -27,4 +31,5 @@ export async function createorder(prevState: unknown, formData: FormData) {
   } catch (error) {
     console.log("error", error);
   }
+  redirect("/");
 }

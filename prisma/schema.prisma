@@ -23,6 +23,8 @@ model Purchase {
   email     String   
   phone     String
   product   String
+  productname String
+  price     Float
   country   Countrys
 }
 
