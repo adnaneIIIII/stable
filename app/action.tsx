@@ -19,6 +19,7 @@ export async function createorder(prevState: unknown, formData: FormData) {
         lastname: submission.value.lastname,
         email: submission.value.email,
         phone: submission.value.phone,
+        product: submission.value.product,
         country: submission.value.country,
       },
     });

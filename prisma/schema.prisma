@@ -22,6 +22,7 @@ model Purchase {
   lastname  String
   email     String   
   phone     String
+  product   String
   country   Countrys
 }
 

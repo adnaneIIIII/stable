@@ -49,7 +49,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
   const [product, setProduct] = useState<Product[]>([]);
   useEffect(() => {
     fetchProduct();
-  },[]);
+  }, []);
 
   const fetchProduct = async () => {
     const res = (await getSingleProduct(params.id)) as Product[];
@@ -86,6 +86,13 @@ export default function ProductPage({ params }: { params: { id: string } }) {
         <div className="lg:flex gap-4 justify-center">
           <div className="lg:w-[60%]">
             <form id={from.id} onSubmit={from.onSubmit} action={action}>
+              <input
+                type="hidden"
+                name={fields.product.name}
+                defaultValue={params.id}
+                key={params.id}
+                value={params.id}
+              />
               <Card className="mt-5 mb-4">
                 <CardHeader>
                   <CardTitle>Checkout Details</CardTitle>
