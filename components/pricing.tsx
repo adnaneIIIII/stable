@@ -38,7 +38,7 @@ export default function Pricing(props: any) {
   ];
   const planNames = ["Starter", "Pro", "Enterprise"]; // Added plan names
   return (
-    <section className="py-16 md:py-32">
+    <section className="py-16 md:py-32" id="pricing">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl space-y-6 text-center">
           <h1 className="text-center text-4xl font-semibold lg:text-5xl">

@@ -10,20 +10,17 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { getSingleProduct } from "@/services";
-import { MouseEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ChevronLeft, Lock } from "lucide-react";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Lock } from "lucide-react";
 import { Label } from "@/components/ui/label";
-import { gql, useMutation } from "@apollo/client";
 import { useFormState } from "react-dom";
 import { createorder } from "@/app/action";
 import { useForm } from "@conform-to/react";
@@ -107,7 +104,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 key={product[0]?.price}
                 value={product[0]?.price}
               />
-              
+
               <Card className="mt-5 mb-4">
                 <CardHeader>
                   <CardTitle>Checkout Details</CardTitle>

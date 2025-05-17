@@ -31,5 +31,5 @@ export async function createorder(prevState: unknown, formData: FormData) {
   } catch (error) {
     console.log("error", error);
   }
-  redirect("/");
+  redirect(`/payment/${submission.value.product}`); // Redirect to the product page
 }
