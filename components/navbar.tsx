@@ -9,7 +9,7 @@ function Navbar() {
         <div className="flex items-start">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src={"/holo.png"}
+              src={"/wiholo.png"}
               alt="logo"
               width={120}
               height={100}

@@ -33,7 +33,7 @@ export default function Page() {
   }, []);
 
   const fetchProduct = async () => {
-    const res = await bannerSection() as GetProductResponse;
+    const res = (await bannerSection()) as GetProductResponse;
     setProduct(res.product);
     console.log(res.product);
   };
@@ -42,7 +42,9 @@ export default function Page() {
     <>
       <HeroSection />
       <Features />
+
       <Pricing product={product} />
+
       <Testimonials />
       <Contact />
       <FooterSection />

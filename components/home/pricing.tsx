@@ -50,10 +50,13 @@ export default function Pricing(props: any) {
   ];
   const planNames = ["", "", ""]; // Added plan names
   return (
-    <section className="py-16 md:py-32" id="pricing">
+    <section
+      className="bg-black bg-gradient-to-b from-[#b24800] to-[#000] py-[72px] sm:py-24"
+      id="pricing"
+    >
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl space-y-6 text-center">
-          <h1 className="text-center text-4xl font-semibold lg:text-5xl">
+          <h1 className="text-center font-bold text-5xl sm:text-6xl tracking-tighter">
             Pricing that Scales with You
           </h1>
           <p>

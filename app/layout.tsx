@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import clsx from "clsx";
 
-const geistSans = DM_Sans({
+const dm_Sans = DM_Sans({
   subsets: ["latin"],
 });
 
@@ -19,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased`}>
+      <body className={clsx(dm_Sans.className, `antialiased`)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

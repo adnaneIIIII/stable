@@ -1,11 +1,18 @@
 "use client";
 import Contact from "@/components/contact";
-import Features from "@/components/features-3";
+// import Features from "@/components/features-3";
 import FooterSection from "@/components/footer";
-import Devices from "@/components/home/devices";
-import Hero from "@/components/home/hero";
+import Banner from "@/components/home/banner";
+import CallToAction from "@/components/home/CallToAction";
+
+import Faq from "@/components/home/FAQs";
+import Features from "@/components/home/Features";
+import Footer from "@/components/home/Footer";
+import HeroSection from "@/components/home/hero";
+import LogoTicker from "@/components/home/LogoTicker";
 import Navbar from "@/components/home/navbar";
 import Pricing from "@/components/home/pricing";
+import ProductShow from "@/components/home/ProductShow";
 import Testimonials from "@/components/testimonials";
 import { bannerSection } from "@/services";
 import React, { useEffect, useState } from "react";
@@ -42,14 +49,21 @@ export default function Page() {
 
   return (
     <>
+      <Banner />
       <Navbar />
-      <Hero />
+      <HeroSection />
+      <LogoTicker />
       <Features />
-      <Devices/>
+      <ProductShow />
+      <Pricing product={product} />
+      <Faq />
+      <CallToAction />
+      <Footer />
+      {/*   <Carosal/>
       <Pricing product={product} />
       <Testimonials />
       <Contact />
-      <FooterSection />
+      <FooterSection /> */}
     </>
   );
 }
