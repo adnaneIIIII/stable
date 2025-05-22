@@ -3,42 +3,27 @@ import { Button } from "@/components/ui/button";
 import Arroww from "@/public/icon/arrow-w.svg";
 
 export default function HeroSection() {
+  const transitionVariants = {
+  item: {
+    hidden: {
+      opacity: 0,
+      filter: "blur(12px)",
+      y: 12,
+    },
+    visible: {
+      opacity: 1,
+      filter: "blur(0px)",
+      y: 0,
+      transition: {
+        type: "spring",
+        bounce: 0.3,
+        duration: 1.5,
+      },
+    },
+  },
+};
   return (
-    // <section
-    //   className="relative bg-[url('/hero.jpg')] bg-cover bg-center bg-no-repeat lg:grid lg:h-screen lg:place-content-center"
-    // >
-    //   {/* Overlay for dark effect and blur */}
-    //   <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
-
-    //   {/* Content */}
-    //   <div className="relative z-10 mx-auto w-screen max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
-    //     <div className="mx-auto max-w-prose text-center">
-    //       <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl dark:text-white">
-    //         Understand user flow and
-    //         <strong className="text-indigo-600"> increase </strong>
-    //         conversions
-    //       </h1>
-
-    //       <p className="mt-4 text-base text-pretty text-gray-700 sm:text-lg/relaxed dark:text-gray-200">
-    //         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi. Natus, provident
-    //         accusamus impedit minima harum corporis iusto.
-    //       </p>
-
-    //       <div className="mt-4 flex justify-center gap-4 sm:mt-6">
-    //         <Link href="#" passHref>
-    //           <Button className="bg-indigo-600 hover:bg-indigo-700 text-white">
-    //             Get Started
-    //           </Button>
-    //         </Link>
-    //         <Link href="#" passHref>
-    //           <Button variant="outline" className="border-gray-200 text-gray-700 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-white">
-    //             Learn More
-    //           </Button>
-    //         </Link>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section>
+    
     <div className=" bg-[linear-gradient(to_bottom,#000,#200000,#a52f00,#d08f17)] py-[72px] sm:py-24 relative overflow-clip">
       <div
         className="absolute h-[375px] w-[750px] sm:w-[2836px] sm:h-[768px] 
@@ -50,6 +35,7 @@ export default function HeroSection() {
 
       <div className="container relative pt-8">
         <div className="flex items-center justify-center ">
+         
           <a
             href="#"
             className="inline-flex gap-3 border py-1 px-2 rounded-xl border-white/30"

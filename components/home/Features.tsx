@@ -1,5 +1,12 @@
 import Feature from "./Feature";
-const features = [
+import { LucideIcon, Settings2, Sparkles, Zap } from "lucide-react";
+
+interface FeatureItem {
+  title: string;
+  description: React.ReactNode;
+  Icone: LucideIcon; // More specific type
+}
+const features : FeatureItem[] = [
   {
     title: "10,000+ TV Channels",
     description: (
@@ -9,6 +16,7 @@ const features = [
         HD, anytime, anywhere.
       </>
     ),
+    Icone: Zap,
   },
   {
     title: "100% High Resolution",
@@ -19,6 +27,7 @@ const features = [
         with vibrant colors, deep contrasts, and lifelike detail.
       </>
     ),
+    Icone: Settings2,
   },
   {
     title: "34,000+ Movies & TV Shows",
@@ -29,6 +38,7 @@ const features = [
         originals.
       </>
     ),
+    Icone: Sparkles,
   },
 ];
 export default function Features() {
@@ -43,8 +53,13 @@ export default function Features() {
           ultimate streaming experience
         </p>
         <div className="mt-16 flex flex-col sm:flex-row gap-4 max-w-6xl mx-auto ">
-          {features.map(({ title, description }) => (
-            <Feature title={title} description={description} key={title} />
+          {features.map(({ title, description, Icone }) => (
+            <Feature
+              title={title}
+              description={description}
+              Icone={Icone} // Pass the component, not the element
+              key={title}
+            />
           ))}
         </div>
       </div>

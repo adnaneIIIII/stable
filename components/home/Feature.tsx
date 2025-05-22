@@ -1,14 +1,13 @@
 import Ecosystem from "@/public/icon/ecosystem.svg";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-import { ReactNode, useEffect, useRef } from "react";
-
-export default function Feature({
-  title,
-  description,
-}: {
+import { LucideIcon, LucideProps } from "lucide-react";
+import { ComponentType, ReactNode, useEffect, useRef } from "react";
+interface FeatureProps  {
   title: string;
-  description: ReactNode;
-}) {
+  description: React.ReactNode;
+  Icone: LucideIcon; // More specific type
+}
+export default function Feature({ title, description, Icone }: FeatureProps) {
   const offsetX = useMotionValue(-100);
   const offsetY = useMotionValue(-100);
   const maskImage = useMotionTemplate`radial-gradient(100px 100px at ${offsetX}px ${offsetY}px, black, transparent)`;
@@ -39,7 +38,7 @@ export default function Feature({
         ref={border}
       ></motion.div>
       <div className="inline-flex h-14 w-14 bg-white text-black justify-center items-center rounded-lg">
-        <Ecosystem />
+        <Icone />
       </div>
       <h3 className="mt-6 font-bold ">{title}</h3>
       <p className="mt-2 text-white/70">{description}</p>

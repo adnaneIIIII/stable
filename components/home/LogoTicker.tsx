@@ -21,8 +21,8 @@ export default function LogoTicker() {
   return (
     <div className="py-[72px] sm:py-24 bg-black">
       <div className="container">
-        <h2 className="text-3xl font-bold text-center text-white/70">
-          Works on all devices
+        <h2 className="text-center font-bold text-5xl sm:text-6xl tracking-tighter">
+          Everything you need
         </h2>
 
         <div className="flex overflow-hidden mt-10 before:content-[''] before:z-10 after:content-[''] before:absolute after:absolute before:h-full after:h-full before:w-10 after:w-10 relative  after:right-0 before:left-0 before:top-0 after:top-0 before:bg-[linear-gradient(to_right,#000,rgb(0,0,0,0))] after:bg-[linear-gradient(to_left,#000,rgb(0,0,0,0))]">
@@ -45,7 +45,7 @@ export default function LogoTicker() {
                 width={150}
               />
             ))}
-             {image.map((item) => (
+            {image.map((item) => (
               <Image
                 className="flex-none h-96 w-auto "
                 src={`/assets/` + item}

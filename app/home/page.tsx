@@ -4,6 +4,7 @@ import Contact from "@/components/contact";
 import FooterSection from "@/components/footer";
 import Banner from "@/components/home/banner";
 import CallToAction from "@/components/home/CallToAction";
+import Devices from "@/components/home/devices";
 
 import Faq from "@/components/home/FAQs";
 import Features from "@/components/home/Features";
@@ -56,6 +57,8 @@ export default function Page() {
       <Features />
       <ProductShow />
       <Pricing product={product} />
+      <Devices />
+      <Contact />
       <Faq />
       <CallToAction />
       <Footer />
